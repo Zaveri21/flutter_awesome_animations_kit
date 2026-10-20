@@ -1,0 +1,22 @@
+#!/bin/sh
+# Pre-push hook: publish dry-run (requires clean git state after commit)
+# Setup for all devs: run `git config core.hooksPath .githooks` once after cloning
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo "${YELLOW}Running pre-push checks...${NC}"
+
+# ─── Publish Dry Run ─────────────────────────────────────────────────────────
+echo "\n${YELLOW}[1/1] Running dart pub publish --dry-run...${NC}"
+dart pub publish --dry-run
+if [ $? -ne 0 ]; then
+  echo "${RED}✗ Publish dry-run failed. Fix the issues above before pushing.${NC}"
+  exit 1
+fi
+echo "${GREEN}✓ Publish dry-run OK${NC}"
+
+echo "\n${GREEN}All checks passed. Proceeding with push.${NC}"
+exit 0

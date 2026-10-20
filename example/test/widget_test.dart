@@ -1,40 +1,47 @@
-import 'package:example/example.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:example/main.dart';
 
 void main() {
-  testWidgets('App initializes correctly and navigates to ListViewScreen',
+  testWidgets('HomeScreen displays all section cards',
       (WidgetTester tester) async {
-    // Build the app
     await tester.pumpWidget(const MyApp());
+    await tester.pump();
 
-    // Verify the HomeScreen is displayed
-    expect(find.text('Flutter Animation'), findsOneWidget);
-    expect(find.text('fadeIn'), findsOneWidget);
-    expect(find.text('slideRTL'), findsOneWidget);
+    expect(find.text('Awesome Animations Kit'), findsOneWidget);
+    expect(find.text('Entry Animations (ListView)'), findsOneWidget);
+    expect(find.text('Attention Seekers'), findsOneWidget);
+    expect(find.text('Animated Text'), findsOneWidget);
+  });
 
-    // Tap on the 'fadeIn' list item
-    await tester.tap(find.text('fadeIn'));
+  testWidgets('Navigates to ListAnimationsScreen',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
     await tester.pumpAndSettle();
 
-    // Verify the ListViewScreen is displayed with the correct title
-    expect(find.text('fadeIn'), findsOneWidget);
-    expect(find.byType(ListView), findsOneWidget);
-
-    // Verify the ListView contains items
-    expect(find.text('Item 0'), findsOneWidget);
-    expect(find.text('Item 1'), findsOneWidget);
-
-    // Tap back to go to HomeScreen
-    await tester.pageBack();
+    await tester.tap(find.text('Entry Animations (ListView)'));
     await tester.pumpAndSettle();
 
-    // Verify the HomeScreen is displayed again
-    expect(find.text('Flutter Animation'), findsOneWidget);
+    expect(find.text('Entry Animations'), findsOneWidget);
+  });
 
-    // Test AnimatedText
-    expect(find.text('CountUp'), findsOneWidget);
-    expect(find.text('CountDown'), findsOneWidget);
-    expect(find.text('Typing'), findsOneWidget);
+  testWidgets('Navigates to AttentionSeekersScreen',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Attention Seekers'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Attention Seekers'), findsOneWidget);
+  });
+
+  testWidgets('Navigates to AnimatedTextScreen', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Animated Text'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Animated Text'), findsOneWidget);
   });
 }
