@@ -138,9 +138,9 @@ class FlutterAnimatedTextState extends State<FlutterAnimatedText>
           animation: _typingAnimation!,
           builder: (context, child) {
             final int length = _typingAnimation!.value.toInt().clamp(
-              0,
-              textLength,
-            );
+                  0,
+                  textLength,
+                );
             return Text(
               (widget.normalText ?? '').substring(0, length),
               style: widget.style,
@@ -172,8 +172,7 @@ class FlutterAnimatedTextState extends State<FlutterAnimatedText>
     }
 
     // Reinitialize whenever anything that affects the animation changes.
-    final needsReinit =
-        widget.animationType != oldWidget.animationType ||
+    final needsReinit = widget.animationType != oldWidget.animationType ||
         widget.repeatMode != oldWidget.repeatMode ||
         widget.curve != oldWidget.curve ||
         widget.startValue != oldWidget.startValue ||
