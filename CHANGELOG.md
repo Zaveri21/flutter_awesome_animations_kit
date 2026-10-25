@@ -1,3 +1,7 @@
+## 0.0.5
+
+- **Security:** Bumped minimum SDK to Dart ≥ 3.13.7 / Flutter ≥ 3.47.8 to address a Dart HTTPS certificate validation vulnerability. No API changes.
+
 ## 0.0.4
 * Fixed `scaleLTR` and `scaleCenterZoomOut` animations not rendering with correct alignment.
 * Fixed crash when `startValue`/`endValue` are null for countUp/countDown animations.

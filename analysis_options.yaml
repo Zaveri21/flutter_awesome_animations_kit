@@ -1,4 +1,19 @@
+# This file configures the static analysis results for your project (errors,
+# warnings, and lints).
+#
+# This enables the 'recommended' set of lints from `package:flutter_lints`.
+# This set helps identify many issues that may lead to problems when running
+# or consuming Flutter/Dart code, and enforces writing Dart using a single,
+# idiomatic style and format.
+
+analyzer:
+  exclude:
+    - build/**
+    - web/**
 include: package:flutter_lints/flutter.yaml
 
-# Additional information about this file can be found at
+# For more information about the core and recommended set of lints, see
+# https://dart.dev/go/core-lints
+
+# For additional information about configuring this file, see
 # https://dart.dev/guides/language/analysis-options

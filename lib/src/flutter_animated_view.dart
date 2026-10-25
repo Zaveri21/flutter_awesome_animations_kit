@@ -106,7 +106,8 @@ class FlutterAnimatedViewState extends State<FlutterAnimatedView>
       _controller.duration = widget.duration;
     }
 
-    final needsReinit = widget.animationType != oldWidget.animationType ||
+    final needsReinit =
+        widget.animationType != oldWidget.animationType ||
         widget.curve != oldWidget.curve;
 
     if (needsReinit) {

@@ -1,13 +1,13 @@
 name: flutter_awesome_animations_kit
-description: "Effortlessly animate views or list items with AnimationView by selecting an animation type. Options include: none, fadeIn, scale, slideRTL, slideLTR, slideUp, flip, bounce, scaleLTR, scaleCenterZoomOut. Enhance your UI seamlessly!"
-version: 0.0.4
+description: "Animate views or list items with AnimationView. Supports fadeIn, scale, slideRTL, slideLTR, slideUp, flip, bounce, scaleLTR, and scaleCenterZoomOut animations."
+version: 0.0.5
 homepage: https://github.com/Zaveri21/flutter_awesome_animations_kit
 repository: https://github.com/Zaveri21/flutter_awesome_animations_kit
 issue_tracker: https://github.com/Zaveri21/flutter_awesome_animations_kit/issues
 
 environment:
-  sdk: ">=2.17.0 <4.0.0"
-  flutter: ">=3.0.0"
+  sdk: ">=3.13.7 <4.0.0"
+  flutter: ">=3.47.8"
 
 dependencies:
   flutter:
