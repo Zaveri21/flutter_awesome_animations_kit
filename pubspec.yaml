@@ -1,13 +1,13 @@
 name: flutter_awesome_animations_kit
-description: "Animate views or list items with AnimationView. Supports fadeIn, scale, slideRTL, slideLTR, slideUp, flip, bounce, scaleLTR, and scaleCenterZoomOut animations."
-version: 0.0.5
+description: "Animate widgets, list items and text with FlutterAnimatedView and FlutterAnimatedText: fade, slide, scale, flip, bounce, rotate, pulse, shake, countUp, countDown and typing."
+version: 0.0.6
 homepage: https://github.com/Zaveri21/flutter_awesome_animations_kit
 repository: https://github.com/Zaveri21/flutter_awesome_animations_kit
 issue_tracker: https://github.com/Zaveri21/flutter_awesome_animations_kit/issues
 
 environment:
-  sdk: ">=3.13.7 <4.0.0"
-  flutter: ">=3.47.8"
+  sdk: ">=3.14.0 <4.0.0"
+  flutter: ">=3.50.1"
 
 dependencies:
   flutter:
@@ -16,8 +16,26 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
-  test: ^1.24.0
+  flutter_lints: ">=6.0.0 <7.0.0"
+  material_ui: ">=1.11.1 <2.0.0"
+  test: ">=1.24.0 <2.0.0"
+
+topics:
+  - animation
+  - ui
+  - widget
+  - transition
+  - effects
+
+screenshots:
+  - description: "Staggered list entry animations: fadeIn, slide, scale, flip and more"
+    path: gifs/animated_view1.gif
+  - description: "More entry animations: bounce, scaleLTR, scaleCenterZoomOut, rotate"
+    path: gifs/animated_view2.gif
+  - description: "Attention seeker animations: pulse and shake with repeatMode"
+    path: gifs/animated_view_new.gif
+  - description: "Animated text: countUp, countDown and typing effects"
+    path: gifs/animated_text.gif
 
 platforms:
   android:

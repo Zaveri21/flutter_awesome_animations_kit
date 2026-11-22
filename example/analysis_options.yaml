@@ -2,6 +2,8 @@ analyzer:
   exclude:
     - build/**
     - web/**
+    - android/**
+    - ios/**
 include: package:flutter_lints/flutter.yaml
 
 # For additional information about configuring this file, see

@@ -2,3 +2,15 @@
 .idea/
 coverage/
 *.iml
+# Build outputs & tool caches (pub ignores .gitignore when .pubignore exists)
+build/
+.dart_tool/
+example/build/
+example/.dart_tool/
+example/android/.gradle/
+example/android/build/
+example/android/local.properties
+example/ios/Pods/
+example/ios/Flutter/ephemeral/
+pubspec.lock
+example/pubspec.lock

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_awesome_animations_kit/flutter_awesome_animations_kit.dart';
 
 void main() {
@@ -67,10 +67,14 @@ class HomeScreen extends StatelessWidget {
             child: Card(
               margin: const EdgeInsets.only(bottom: 12),
               child: ListTile(
-                leading: Icon(section['icon'] as IconData,
-                    color: Colors.deepPurple),
-                title: Text(section['label'] as String,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                leading: Icon(
+                  section['icon'] as IconData,
+                  color: Colors.deepPurple,
+                ),
+                title: Text(
+                  section['label'] as String,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
                 subtitle: Text(section['subtitle'] as String),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
@@ -133,13 +137,19 @@ class ListAnimationsScreen extends StatelessWidget {
             child: Card(
               margin: const EdgeInsets.only(bottom: 10),
               child: ListTile(
-                title: Text(_types[index],
-                    style: const TextStyle(fontWeight: FontWeight.w600)),
-                trailing: const Icon(Icons.play_arrow, color: Colors.deepPurple),
+                title: Text(
+                  _types[index],
+                  style: const TextStyle(fontWeight: FontWeight.w600),
+                ),
+                trailing: const Icon(
+                  Icons.play_arrow,
+                  color: Colors.deepPurple,
+                ),
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => ListViewScreen(animationName: _types[index]),
+                    builder: (_) =>
+                        ListViewScreen(animationName: _types[index]),
                   ),
                 ),
               ),
@@ -206,18 +216,24 @@ class ListViewScreen extends StatelessWidget {
             child: Card(
               margin: const EdgeInsets.only(bottom: 8),
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 14,
+                ),
                 child: Row(
                   children: [
                     CircleAvatar(
                       backgroundColor: Colors.deepPurple.shade100,
-                      child: Text('${index + 1}',
-                          style: const TextStyle(color: Colors.deepPurple)),
+                      child: Text(
+                        '${index + 1}',
+                        style: const TextStyle(color: Colors.deepPurple),
+                      ),
                     ),
                     const SizedBox(width: 12),
-                    Text('Item ${index + 1}',
-                        style: const TextStyle(fontSize: 16)),
+                    Text(
+                      'Item ${index + 1}',
+                      style: const TextStyle(fontSize: 16),
+                    ),
                   ],
                 ),
               ),
@@ -245,8 +261,10 @@ class AttentionSeekersScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('pulse — great for badges & buttons',
-                style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text(
+              'pulse — great for badges & buttons',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -256,22 +274,28 @@ class AttentionSeekersScreen extends StatelessWidget {
                   repeatMode: true,
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 12),
+                      horizontal: 20,
+                      vertical: 12,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.deepPurple,
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: const Text('NEW',
-                        style:
-                            TextStyle(color: Colors.white, fontSize: 18)),
+                    child: const Text(
+                      'NEW',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
                   ),
                 ),
                 const FlutterAnimatedView(
                   animationType: AnimationType.pulse,
                   repeatMode: true,
                   duration: Duration(milliseconds: 800),
-                  child: Icon(Icons.notifications,
-                      size: 48, color: Colors.orange),
+                  child: Icon(
+                    Icons.notifications,
+                    size: 48,
+                    color: Colors.orange,
+                  ),
                 ),
                 const FlutterAnimatedView(
                   animationType: AnimationType.pulse,
@@ -282,8 +306,10 @@ class AttentionSeekersScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40),
-            const Text('shake — great for error states & alerts',
-                style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text(
+              'shake — great for error states & alerts',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -294,22 +320,28 @@ class AttentionSeekersScreen extends StatelessWidget {
                   duration: const Duration(milliseconds: 600),
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 12),
+                      horizontal: 20,
+                      vertical: 12,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Text('Error!',
-                        style:
-                            TextStyle(color: Colors.white, fontSize: 16)),
+                    child: const Text(
+                      'Error!',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
                   ),
                 ),
                 const FlutterAnimatedView(
                   animationType: AnimationType.shake,
                   repeatMode: true,
                   duration: Duration(milliseconds: 800),
-                  child: Icon(Icons.warning_amber_rounded,
-                      size: 48, color: Colors.amber),
+                  child: Icon(
+                    Icons.warning_amber_rounded,
+                    size: 48,
+                    color: Colors.amber,
+                  ),
                 ),
               ],
             ),
@@ -343,8 +375,11 @@ class AnimatedTextScreen extends StatelessWidget {
                 endValue: 1000,
                 animationType: TextAnimationType.countUp,
                 duration: Duration(seconds: 2),
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple),
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                ),
               ),
             ),
             SizedBox(height: 16),
@@ -355,8 +390,11 @@ class AnimatedTextScreen extends StatelessWidget {
                 endValue: 100,
                 animationType: TextAnimationType.countDown,
                 duration: Duration(seconds: 2),
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold,
-                    color: Colors.red),
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
               ),
             ),
             SizedBox(height: 16),
@@ -368,8 +406,11 @@ class AnimatedTextScreen extends StatelessWidget {
                 precision: 2,
                 animationType: TextAnimationType.countUp,
                 duration: Duration(seconds: 2),
-                style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold,
-                    color: Colors.green),
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
               ),
             ),
             SizedBox(height: 16),
@@ -403,11 +444,14 @@ class _TextCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(label,
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey.shade600,
-                    fontWeight: FontWeight.w500)),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.grey.shade600,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
             const SizedBox(height: 8),
             child,
           ],

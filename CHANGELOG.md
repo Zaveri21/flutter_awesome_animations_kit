@@ -1,3 +1,15 @@
+## 0.0.6
+
+- **Flutter 3.50.1 support:** Verified on Flutter 3.50.1 / Dart 3.14.0. Minimum SDK raised to Flutter ≥ 3.50.1 / Dart ≥ 3.14.0 (keeps the TLS certificate security fix from 0.0.5, GHSA-frr6-h895-5pxp).
+- **Fix:** Replaced deprecated `package:flutter/material.dart` import in the library with `package:flutter/widgets.dart` — resolves the pub.dev static analysis deprecation warning. The package no longer depends on Material.
+- Example app and tests migrated to `package:material_ui`.
+- Example Android project updated to Gradle 9.5.0, Android Gradle Plugin 9.3.1 and Kotlin 2.4.20 (required by Flutter 3.50).
+- Bumped `flutter_lints` to 6.0.0.
+- Updated package description to list all animation types.
+- Added pub.dev `topics` and `screenshots` for better discoverability.
+- Reduced published package size from 25 MB to 2 MB (build outputs excluded via `.pubignore`).
+- No API changes.
+
 ## 0.0.5
 
 - **Security:** Bumped minimum SDK to Dart ≥ 3.13.7 / Flutter ≥ 3.47.8 to address a Dart HTTPS certificate validation vulnerability. No API changes.

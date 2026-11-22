@@ -61,7 +61,7 @@ flutter pub add flutter_awesome_animations_kit
 import 'package:flutter_awesome_animations_kit/flutter_awesome_animations_kit.dart';
 ```
 
-> **Requires** Flutter ≥ 3.47.8 · Dart ≥ 3.13.7
+> **Requires** Flutter ≥ 3.50.1 · Dart ≥ 3.14.0
 
 ---
 

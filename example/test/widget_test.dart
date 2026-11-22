@@ -2,8 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:example/main.dart';
 
 void main() {
-  testWidgets('HomeScreen displays all section cards',
-      (WidgetTester tester) async {
+  testWidgets('HomeScreen displays all section cards', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const MyApp());
     await tester.pump();
 
@@ -13,8 +14,7 @@ void main() {
     expect(find.text('Animated Text'), findsOneWidget);
   });
 
-  testWidgets('Navigates to ListAnimationsScreen',
-      (WidgetTester tester) async {
+  testWidgets('Navigates to ListAnimationsScreen', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
     await tester.pumpAndSettle();
 
@@ -24,8 +24,9 @@ void main() {
     expect(find.text('Entry Animations'), findsOneWidget);
   });
 
-  testWidgets('Navigates to AttentionSeekersScreen',
-      (WidgetTester tester) async {
+  testWidgets('Navigates to AttentionSeekersScreen', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const MyApp());
     await tester.pumpAndSettle();
 
